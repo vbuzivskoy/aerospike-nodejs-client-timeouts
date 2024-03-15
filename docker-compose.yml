@@ -1,0 +1,12 @@
+services:
+
+  aerospike:
+    container_name: aerospike-timeouts
+    image: aerospike/aerospike-server
+    ports:
+      - '3000:3000'
+    environment:
+      - NAMESPACE=test
+      - SERVICE_PORT=3000
+      - MEM_GB=1
+      - STORAGE_GB=1
