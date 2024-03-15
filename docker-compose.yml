@@ -1,0 +1,18 @@
+# Copyrights 2020 Playtika Ltd., all rights reserved to Playtika Ltd.
+# privacy+e17bb14d-edc1-4d26-930d-486fcc1ab8fe@playtika.com
+
+version: '3.4'
+
+services:
+
+  aerospike:
+    container_name: aerospike-timeouts
+    image: aerospike/aerospike-server
+    ports:
+      - '3000:3000'
+    environment:
+      - NAMESPACE=test
+      - SERVICE_PORT=3000
+      - MEM_GB=1
+      - STORAGE_GB=1
+
